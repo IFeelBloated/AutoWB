@@ -57,7 +57,7 @@ public:
 				auto AccumulatedIntensity = 0.;
 				auto CurrentSceneStartIndex = -Radius;
 				auto CurrentSceneEndIndex = Radius + 1;
-				for (auto t : Range{ -Radius })
+				for (auto t : Range{ -Radius - 1 })
 					if (ReferenceFrames[t]["_SceneChangePrev"].Exists())
 						if (auto SceneChangeTag = static_cast<bool>(ReferenceFrames[t]["_SceneChangePrev"]); SceneChangeTag) {
 							CurrentSceneStartIndex = t;
